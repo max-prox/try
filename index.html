@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send IP Address to Telegram</title>
+</head>
+<body>
+    <button id="sendButton">Send IP Address</button>
+    <script>
+        document.getElementById("sendButton").addEventListener("click", function() {
+            fetch("http://localhost/final/").then(response => {
+                if (response.ok) {
+                    alert("IP address sent to Telegram.");
+                } else {
+                    alert("Failed to send IP address.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
